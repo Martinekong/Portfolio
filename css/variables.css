@@ -1,0 +1,17 @@
+:root {
+
+  --primary: rgb(3, 12, 37);
+  --primary-hover: rgb(33, 42, 67) ;
+  --on-primary: rgb(255, 255, 255) ;
+
+  --secondary: rgb(244, 239, 235) ;
+  --on-secondary: rgb(0, 0, 0) ;
+
+  --background: rgb(255, 255, 255) ;
+  --on-background: rgb(0, 0, 0) ;
+
+  --ff-heading: "Arimo", sans-serif ;
+  --ff-hero-banner: "Asap", sans-serif;
+  --ff-body: "Montserrat", sans-serif ;
+
+}
