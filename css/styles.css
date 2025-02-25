@@ -123,28 +123,41 @@ footer {
 }
 
 /* BUTTONS */
-#nav-btn {
+button {
   border: none;
-  background: none;
-  padding: .5rem 1rem;
 }
 
-#nav-btn:hover {
+button:hover {
   cursor: pointer;
 }
 
-.hero-icons button {
-  border: none;
+.primary-btn {
   border-radius: 6px;
-  height: 2.8rem;
-  width: 2.8rem;
   background-color: var(--primary);
   color: var(--on-primary);
 }
 
-.hero-icons button:hover {
-  cursor: pointer;
+.primary-btn:hover {
   background-color: var(--primary-hover);
+}
+
+.hero-icons .primary-btn {
+  height: 2.8rem;
+  width: 2.8rem;
+}
+
+.project-btns .primary-btn {
+  padding: 1rem;
+  width: 240px;
+  display: flex;
+  gap: 1rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+#nav-btn {
+  background: none;
+  padding: 1rem;
 }
 
 
@@ -266,19 +279,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-}
-
-.project-btns button {
-  background-color: var(--primary);
-  color: var(--on-primary);
-  padding: 1rem;
-  width: 240px;
-  border: none;
-  border-radius: 6px;
-  display: flex;
-  gap: 1rem;
-  text-transform: capitalize;
-  font-size: 1rem;
 }
 
 
