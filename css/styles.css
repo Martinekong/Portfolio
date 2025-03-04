@@ -108,7 +108,7 @@ header li:not(:first-of-type):hover {
 
 header a {
   font-size: 1.25rem;
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: 3px;
   color: var(--on-primary);
 }

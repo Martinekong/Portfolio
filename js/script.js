@@ -45,6 +45,8 @@ function showProjectCards() {
 function copyEmail() {
   // add copy function to the button with envelope in hero section
   // add copy function to the .email-copy in the contact section
+  
+  // add overlays to show the user the url has been copied
 }
 
 renderPage();
