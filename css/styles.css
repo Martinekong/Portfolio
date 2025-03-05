@@ -64,7 +64,7 @@ header {
   position: fixed;
   z-index: 2;
   top: 0;
-  right: -200px;
+  right: -208px;
   bottom: 0;
   background-color: var(--primary);
   display: flex;
@@ -150,6 +150,7 @@ button:hover {
 #nav-btn {
   background: none;
   padding: 1rem;
+  color: black;
 }
 
 
