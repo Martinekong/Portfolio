@@ -18,14 +18,6 @@ main {
   flex-direction: column;
 }
 
-/* @media screen and (min-width: 1400px) {
-  main {
-    max-width: 1300px;
-    margin: 3rem auto;
-  }
-} */
- /* I hid this because it creates margin on the sections with background color .. */
-
 img {
   width: 100%;
   height: 100%;
@@ -41,7 +33,7 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 h2 {
@@ -170,6 +162,8 @@ button:hover {
 
 .hero-img {
   position: relative;
+  max-width: 400px;
+  align-self: center;
 }
 
 .hero-img::before {
@@ -186,12 +180,8 @@ button:hover {
 .hero-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.hero-info h1 {
   text-align: center;
+  gap: 1rem;
 }
 
 .hero-info p {
@@ -205,12 +195,13 @@ button:hover {
   padding: 2rem;
   border-bottom-right-radius: 30px;
   border-top-left-radius: 30px;
-  max-width: fit-content;
+  text-align: center;
 }
 
 .hero-icons {
   display: flex;
   gap: 1rem;
+  align-self: center;
 }
 
 .hero-arrow {
@@ -223,11 +214,13 @@ button:hover {
 }
 
 
-
 /* PORTFOLIO */
 #portfolio {
   background-color: var(--secondary);
   padding: 4rem 2rem; /* use this on all sections? */
+}
+
+.portfolio-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -246,6 +239,10 @@ button:hover {
   margin-bottom: 1rem;
 }
 
+.project-banner:hover {
+  cursor: pointer;
+}
+
 .project-banner i {
   margin-left: auto;
 }
@@ -260,6 +257,8 @@ button:hover {
   height: 0;
   display: grid;
   gap: 1rem;
+  font-size: 1.25rem;
+  line-height: 120%;
   transition: height 0.4s ease-in-out; /* this isnt smooth? */
 }
 
@@ -273,6 +272,10 @@ button:hover {
 
 .project-banner i.rotate {
   transform: rotate(180deg);
+}
+
+.project-dropdown img {
+  max-width: 400px;
 }
 
 .project-btns {
@@ -295,13 +298,20 @@ button:hover {
   border-bottom: 1px solid var(--secondary);
 }
 
+#about p {
+  font-size: 1.25rem;
+  line-height: 120%;
+}
+
 .about-img {
   position: relative;
+  margin: 0 auto;
 }
 
 .about-img img {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  max-width: 400px;
 }
 
 .about-img::before {
@@ -315,12 +325,14 @@ button:hover {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
   z-index: 1;
+  max-width: 374px;
 }
 
 .skills-banner {
   background-color: var(--primary);
   color: var(--on-primary);
   margin-bottom: 4rem;
+  margin-top: 2rem;
 }
 
 .skills-banner ul {
@@ -335,6 +347,9 @@ button:hover {
 #contact {
   background-color: var(--secondary);
   padding: 4rem 2rem; /* use this on all sections? */
+}
+
+.contact-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -351,4 +366,109 @@ button:hover {
   font-family: var(--ff-body);
   font-size: 1rem;
   color: var(--on-background);
+}
+
+@media screen and (min-width:700px) {
+  #hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .hero-img {
+    grid-row: span 2;
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .hero-info {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hero-arrow {
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    align-self: flex-end;
+  }
+
+  .project-dropdown {
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2rem;
+  }
+
+  .project-dropdown img {
+    grid-row: span 2;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .project-btns {
+    flex-direction: column;
+  }
+
+  #about {
+    display: grid;
+    grid-template-columns: 400 1fr;
+  }
+
+  #about h2 {
+    grid-column: span 2;
+  }
+
+  #about p {
+    /* fix this to look better on larger screens*/
+  }
+
+  .about-img {
+    grid-row: span 2;
+    max-height: 340px;
+  }
+
+  .skills-banner ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #hero {
+    grid-template-columns: 400px 1fr;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .hero-info p {
+    width: 460px;
+    align-self: center;
+  }
+
+  .contact-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contact-container h2 {
+    flex: 100%;
+    text-align: center;
+  }
+}
+
+/* Media queries */
+@media screen and (min-width: 1200px) {
+  /* header,  */
+  #hero, 
+  .portfolio-container, 
+  #about, 
+  .skills-banner ul,
+  .contact-container {
+    max-width: 1136px;
+    margin: 0 auto;
+  }
 }
