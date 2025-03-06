@@ -1,6 +1,7 @@
 function loadPageComponents() { 
   showNavigationMenu();
   showProjectCards();
+  addTopBtn();
 }
 
 function showNavigationMenu() {
@@ -61,6 +62,29 @@ function copyEmail() {
     console.error("Failed to copy email: ", error);
   });
   }
+
+  function addTopBtn() {
+    const topBtn = document.createElement("button");
+    topBtn.classList.add("top-btn")
+    topBtn.setAttribute("aria-label", "Back to top");
+    const topIcon = document.createElement("i")
+    topIcon.classList.add("fa-solid", "fa-chevron-up");
+    topBtn.appendChild(topIcon);
+    document.body.appendChild(topBtn);
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+  
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });  
+  }
+  
 
 loadPageComponents();
 
