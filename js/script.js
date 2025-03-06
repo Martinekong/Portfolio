@@ -24,7 +24,11 @@ function showNavigationMenu() {
     });
   });
 
-  // need to add event listener to close the navigation when clicking outside
+  document.addEventListener("click", (event) => {
+    if (!navigation.contains(event.target) && !navBtn.contains(event.target)) {
+      navigation.classList.remove("show");
+    }
+  });
 }
 
 function showProjectCards() {
@@ -38,11 +42,14 @@ function showProjectCards() {
       icon.classList.toggle("rotate");
     });
   });
-
-  // Need to add event listener so that when one card is open, it closes when another is opened
 }
 
 function copyEmail() {
+  const heroEmailBtn = document.getElementById("hero-email");
+  const contactEmailBtn = document.getElementById("contact-email");
+
+  console.log(heroEmailBtn)
+  console.log(contactEmailBtn)
   // add copy function to the button with envelope in hero section
   // add copy function to the .email-copy in the contact section
   

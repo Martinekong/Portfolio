@@ -256,11 +256,12 @@ button:hover {
   gap: 1rem;
   font-size: 1.25rem;
   line-height: 120%;
-  transition: height 0.4s ease-in-out; /* this isnt smooth? */
+  transition: height 0.4s ease-in-out;
 }
 
 .project-dropdown.show {
   height: auto;
+
 }
 
 .project-banner i {
@@ -396,7 +397,6 @@ button:hover {
 
   .project-dropdown {
     grid-template-columns: 1fr 1fr;
-    padding-top: 2rem;
   }
 
   .project-dropdown img {
