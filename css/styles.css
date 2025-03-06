@@ -407,6 +407,7 @@ button:hover {
 
   .project-btns {
     flex-direction: column;
+    align-self: end;
   }
 
   #about {
