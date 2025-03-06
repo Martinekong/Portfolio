@@ -1,7 +1,6 @@
-function renderPage() { //call this function something else?
+function loadPageComponents() { 
   showNavigationMenu();
   showProjectCards();
-  copyEmail();
 }
 
 function showNavigationMenu() {
@@ -44,16 +43,25 @@ function showProjectCards() {
   });
 }
 
+const heroEmailBtn = document.getElementById("hero-email");
+
 function copyEmail() {
-  const heroEmailBtn = document.getElementById("hero-email");
-  const contactEmailBtn = document.getElementById("contact-email");
+  const email = "martinekongsrud@outlook.com"
 
-  console.log(heroEmailBtn)
-  console.log(contactEmailBtn)
-  // add copy function to the button with envelope in hero section
-  // add copy function to the .email-copy in the contact section
-  
-  // add overlays to show the user the url has been copied
-}
+  navigator.clipboard.writeText(email).then(() => {
+    const overlay = document.createElement("p")
+    overlay.classList.add("copy-overlay");
+    overlay.textContent = "Email copied"
 
-renderPage();
+    heroEmailBtn.appendChild(overlay)
+    setTimeout(() => {
+      heroEmailBtn.removeChild(overlay)
+    }, 2000)
+  }).catch(error => {
+    console.error("Failed to copy email: ", error);
+  });
+  }
+
+loadPageComponents();
+
+heroEmailBtn.addEventListener("click", copyEmail);

@@ -185,7 +185,7 @@ button:hover {
   gap: 1rem;
 }
 
-.hero-info p {
+.hero-banner {
   background-color: var(--primary);
   color: var(--on-primary);
   font-family: var(--ff-hero-banner);
@@ -208,7 +208,7 @@ button:hover {
 .hero-arrow {
   text-transform: uppercase;
   text-align: center;
-  margin: 2rem auto;
+  margin: 3rem auto;
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -439,7 +439,7 @@ button:hover {
     font-size: 6rem;
   }
 
-  .hero-info p {
+  .hero-banner {
     width: 460px;
     align-self: center;
   }
@@ -479,4 +479,20 @@ button:hover {
     max-width: 1136px;
     margin: 0 auto;
   }
+}
+
+/* Overlay */
+#hero-email {
+  position: relative;
+}
+
+.copy-overlay {
+  position: absolute;
+  background-color: var(--secondary);
+  color: black;
+  padding: .5rem;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  width: max-content ;
+  bottom: -2.5rem;
 }
